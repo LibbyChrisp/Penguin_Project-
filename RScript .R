@@ -74,6 +74,8 @@ colnames(penguins_clean)
 
 source(here("Function","cleaning.R"))
 
+#
+
 #I know want to create a new function using this function to clean the data 
 #The cleaning.R file lets us use short hand in our function 
 
@@ -124,10 +126,20 @@ print(penguins_clean_subset)
 library(boot)
 
 #Creating a renv snapshot. This will create a file called rev.lock that contains all the libraries that I have used.
+#All the renv code should be in the console. 
 
 renv::snapshot()
 
 #When I press this file it will show me all the libraries that I have used. 
+
+#Checking which packages I used. 
+
+renv::diagnostics()
+
+#If it says out of sink, do renv :: snapshot again 
+
+
+
 
 
 
